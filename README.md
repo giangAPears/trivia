@@ -10,11 +10,12 @@ In this unit, coders will work in groups to build a project using HTML, CSS, Rea
 
 ### Goal 1: Render a question from sample_data.json on the screen.
 
-- [ ] In App.jsx in the App component, add a variable to set the current question number to 0.
 - [ ] In App.jsx, create a Question component.
+- [ ] Render an instance of `<Question />` inside of `<App />`.
 - [ ] Add props to `<Question />` with the text "Question goes here".
-- [ ] Render `<Question />` inside of App.
+- [ ] In `<App />`, add a variable to set the current question number to 0.
 - [ ] Replace "Question goes here" with the `question.text` field found in data for the first question.
+  - [ ] HINT: Use the question number variable you just wrote.
 - [ ] BONUS: Add styling to your app.
 
 >![Day 1.0 goal](https://i.imgur.com/eTZAXGk.png)
@@ -23,7 +24,7 @@ In this unit, coders will work in groups to build a project using HTML, CSS, Rea
 
 - [ ] In App.jsx, create a NextQuestion component.
 - [ ] Write the JSX to display a button for the user to click for the next question. (It will not work yet.)
-- [ ] Render `<NextQuestion />` inside of App.
+- [ ] Render an instance of `<NextQuestion />` inside of `<App />`.
 
 >![Day 1.5 goal](https://i.imgur.com/o4MzPjL.png)
 
@@ -33,8 +34,8 @@ In this unit, coders will work in groups to build a project using HTML, CSS, Rea
 ### Goal 1: Render the answer choices from sample_data.json on the screen.
 
 - [ ] In App.jsx, create an Answer component.
+- [ ] Render an instance of `<Answer />` inside of `<Question />`.
 - [ ] Add props to `<Answer />` with the text "Answer goes here".
-- [ ] Render `<Answer />` inside of `<Question />`.
   - [ ] Pass props for the answer choices into `<Question />`.
   - [ ] Use those props to render the Answer components inside `<Question />` to display the answer choices.
 - [ ] Refactor to use map to map over all answer choices.
