@@ -1,4 +1,4 @@
-# Trivia App Starter Code!
+ # Trivia App Starter Code!
 
 ## Project Description
 

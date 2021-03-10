@@ -20,19 +20,26 @@ function App() {
     setisAnswered(false);
   };
   let [answerSentence, setanswerSentence] = useState("unanswered");
+  var userCorrect = (isCorrect === true) ? "Correct" : "False";
+  
 
   function handleChoice(event) {
-    var valChoice = event.target.value
-    console.log(valChoice);
+    var userChoice = event.target.value
+    setIsCorrect(userChoice === question.choices[question.correct_choice_index])
+    return userChoice;
   };
+  let [isCorrect, setIsCorrect] = useState(false)
+  console.log(isCorrect)
+
+  var question = data[questionNum].question
 
   return (
     <div className="app">
       {" "}
       <h1> Trivia </h1>
       <Question
-        question={data[questionNum].question.text}
-        choices={data[questionNum].question.choices}
+        question={question.text}
+        choices={question.choices}
         handleChoice = {handleChoice}
       />
       {questionNum < data.length - 1 && (
@@ -44,6 +51,7 @@ function App() {
         />
       )}
       <button onClick={showAnswer}>Show Answer</button>
+      <p> Your answer is {userCorrect} </p>
       <p>The correct answer is {answerSentence}</p>
     </div>
   );
